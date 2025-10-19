@@ -1,0 +1,11 @@
+---
+- name: Development Environment Setup
+  hosts: localhost
+  gather_facts: true
+  force_handlers: true
+
+  tasks:
+    - name: SSH Setup
+      ansible.builtin.include_tasks:
+        file: tasks/ssh.yml
+...
